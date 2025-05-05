@@ -1,0 +1,7 @@
+flask
+werkzeug
+nltk
+spacy
+docx2txt
+pymupdf
+pandas
