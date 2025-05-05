@@ -20,11 +20,12 @@ def extract_skills(resume_text):
     for token in tokens:
         if token.lower() in skills:
             skillset.append(token)
-   
+
     # check for noun chunks (example: machine learning)
     for chunk in nlp_text.noun_chunks:
         chunk_text = chunk.text.lower().strip()
         if chunk_text in skills:
             skillset.append(chunk_text)
 
-    return [i.capitalize() for i in set([i.lower() for i in skillset])]
+    cleaned = [i.capitalize() for i in set([i.lower() for i in skillset])]
+    return ", ".join(cleaned)

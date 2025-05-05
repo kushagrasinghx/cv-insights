@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  nav {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-family: 'Clash Display', sans-serif;
+    font-weight:500;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+  }
+  
+  main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  .subtext {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .upload-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .file-input {
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: border 0.3s ease;
+  }
+  
+  .file-input:hover {
+    border-color: #000000;
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  .file-input::-webkit-file-upload-button:hover {
+    background-color: #333333;
+  }
+  
+  .file-input::file-selector-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .file-input::file-selector-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    .upload-file {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+  }
+  
+  .browse-file-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .upload-file-text {
+    font-size: 14px;
+    color: rgb(77, 77, 77);;
+    text-align: center;
+  }
+  
+  .browse-file-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .credits {
+    font-size: 12px;
+    color: rgb(77, 77, 77);
+    margin-top: 20px;
+  }
+
+  
+.parent {
+  display: grid;
+  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+  
+.name-div {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  height: 400px;
+  width: 300px;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+}
+
+.email-div {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  height: 94px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+
+.skills-div {
+  background-color: white;
+  height: 298px;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: normal;
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-tag {
+  padding: 8px 16px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  background-color: #f0f0f0;;
+  color: black;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

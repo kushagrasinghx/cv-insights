@@ -1,11 +1,41 @@
-<!doctype html>
-<html>
-<head><title>Upload Resume</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Insights - Resume Parser</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
 <body>
-  <h1>Upload Resume</h1>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="resume" accept=".pdf,.docx" required>
-    <button type="submit">Upload</button>
-  </form>
+  <nav>
+    <div class="logo">cv insights</div>
+  </nav>
+  <main>
+    <div class="subtext">
+      This application showcases the <strong>cv insights</strong> resume parser and its ability to parse information from a resume PDF.
+    </div>
+
+    <form class="upload-file" action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="upload-file-subtext">
+        Browse a <strong>pdf</strong> file or drop it here
+      </div>
+
+      <input type="file" name="resume" accept=".pdf,.docx" required class="file-input" />
+
+      <div class="upload-file-text">
+        <span role="img" aria-label="lock" style="margin-right: 6px;">🔒</span>
+        File data will always be stored locally and will not be shared with anyone.
+      </div>
+
+      <button type="submit" class="browse-file-button">Upload</button>
+    </form>
+
+    <div class="credits">
+      Project by <strong>Kushagra Singh, Abhuday Sudhir</strong> and <strong>Arush Khare</strong>
+    </div>
+  </main>
 </body>
 </html>

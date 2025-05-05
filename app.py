@@ -55,11 +55,16 @@ def upload():
     file.save(path)
 
     parser = ResumeParser(path)
+    
+    # Split skills string into list (and strip extra spaces)
+    raw_skills = parser.get_skills()
+    skill_list = [skill.strip() for skill in raw_skills.split(",") if skill.strip()]
+
     result = {
         "name": parser.get_name(),
         "email": parser.get_email(),
         "phone": parser.get_phone(),
-        "skills": parser.get_skills(),
+        "skills": skill_list,  # Pass as list to Jinja
         "education": parser.get_education(),
     }
 

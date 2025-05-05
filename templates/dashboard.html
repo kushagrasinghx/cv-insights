@@ -1,14 +1,46 @@
 <!doctype html>
 <html>
-<head><title>Parsed Resume</title></head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CV Insights - {{ result.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 <body>
-  <h1>Parsed Resume Data</h1>
-  <ul>
-    <li><strong>Name:</strong> {{ result.name }}</li>
-    <li><strong>Email:</strong> {{ result.email }}</li>
-    <li><strong>Phone:</strong> {{ result.phone }}</li>
-    <li><strong>Skills:</strong> {{ result.skills }}</li>
-    <li><strong>Education:</strong> {{ result.education }}</li>
-  </ul>
+  <nav>
+    <div class="logo">cv insights</div>
+  </nav>
+  <main>
+    <div class="parent">
+      <div class="name-div">
+        <div class="profile-header">
+          <img class="profile-picture" src="https://placehold.co/200x200" alt="Profile Picture">
+          <div class="profile-name">{{ result.name }}</div>
+          <div class="education-text">{{ result.education }}</div>
+        </div>
+        <a href="mailto:{{ result.email }}" class="browse-file-button">Contact</a>
+      </div>
+      <div class="email-div">
+        <div class="email-parse"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i>{{ result.email }}</div>
+        <div class="phone-parse"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i>{{ result.phone }}</div>
+      </div>
+      <div class="skills-div">
+        {% for skill in result.skills %}
+          <span class="skill-tag">{{ skill }}</span>
+        {% endfor %}
+      </div>
+  </div>
+    <!-- <ul>
+      <li><strong>Name:</strong> {{ result.name }}</li>
+      <li><strong>Email:</strong> {{ result.email }}</li>
+      <li><strong>Phone:</strong> {{ result.phone }}</li>
+      <li><strong>Skills:</strong> {{ result.skills }}</li>
+      <li><strong>Education:</strong> {{ result.education }}</li>
+    </ul> -->
+  </main>
 </body>
 </html>
