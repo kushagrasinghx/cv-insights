@@ -18,7 +18,7 @@
     <div class="parent">
       <div class="name-div">
         <div class="profile-header">
-          <img class="profile-picture" src="https://placehold.co/200x200" alt="Profile Picture">
+          <img class="profile-picture" src="{{ url_for('static', filename='pfp.jpg') }}" alt="Profile Picture">
           <div class="profile-name">{{ result.name }}</div>
           <div class="education-text">{{ result.education }}</div>
         </div>
@@ -36,6 +36,10 @@
   </div>
   <div class="credits">
     Project by <strong>Kushagra Singh, Abhuday Sudhir</strong> and <strong>Arush Khare</strong>
+  </div>
+  <div class="upload-another">
+    <div class="footer-text">Want to upload another resume?</div>
+    <a href="/" class="browse-file-button" style="font-size: 13px;">Upload</a>
   </div>
   </main>
 </body>
