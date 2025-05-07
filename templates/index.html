@@ -13,6 +13,9 @@
   <nav>
     <div class="logo">cv insights</div>
   </nav>
+  <div id="form-loader" style="display: none;">
+    <div class="loader"></div>
+  </div>
   <main>
     <div class="subtext">
       This application showcases the <strong>cv insights</strong> resume parser and its ability to parse information from a resume PDF.
@@ -37,5 +40,15 @@
       Project by <strong>Kushagra Singh, Abhuday Sudhir</strong> and <strong>Arush Khare</strong>
     </div>
   </main>
+
+  <script>
+    const form = document.querySelector(".upload-file");
+    const loader = document.getElementById("form-loader");
+  
+    form.addEventListener("submit", () => {
+      loader.style.display = "flex";
+    });
+  </script>  
+  
 </body>
 </html>
