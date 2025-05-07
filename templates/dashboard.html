@@ -33,9 +33,12 @@
         <div class="phone-parse"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i>{{ result.phone }}</div>
       </div>
       <div class="skills-div">
-        {% for skill in result.skills %}
-          <span class="skill-tag">{{ skill }}</span>
-        {% endfor %}
+        <input type="text" id="skill-search" placeholder="Search" class="skill-search-input" />
+        <div id="skill-tags">
+          {% for skill in result.skills %}
+            <span class="skill-tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
       </div>
   </div>
 
@@ -48,5 +51,18 @@
     <a href="/" class="browse-file-button" style="font-size: 13px;">Upload</a>
   </div>
   </main>
+  <script>
+    const searchInput = document.getElementById("skill-search");
+    const skillTags = document.querySelectorAll(".skill-tag");
+  
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+  
+      skillTags.forEach(tag => {
+        const skill = tag.textContent.toLowerCase();
+        tag.style.display = skill.includes(query) ? "inline-block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
