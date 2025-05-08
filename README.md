@@ -1,10 +1,9 @@
 # CV Insights 🧠📄
-A ResumeParser project using NLTK and Flask API with a user friendly interface web application.
 
 CV Insights is an intelligent tool designed to extract, analyze, and provide meaningful insights from resumes. This project aims to help recruiters, HR professionals, and job seekers by parsing CVs and summarizing key information such as skills, experience, education, and more.
 
 > 🚧 **Project Under Development**  
-> This is a work-in-progress repo. Future versions will include NLP-powered insights and a Flask-based web interface.
+> This is a work-in-progress repo. Future versions will include more features.
 
 ---
 
