@@ -10,7 +10,7 @@ CV Insights is an intelligent tool designed to extract, analyze, and provide mea
 ## 🔍 Features (Planned)
 
 - ✅ Basic text extraction from PDF resumes
-- 🔜 Natural Language Processing (NLP) model for:
+- ✅ Natural Language Processing (NLP) model for:
   - Skills extraction
   - Summarized profile view
 - 🔜 React-based interactive web interface
@@ -53,10 +53,10 @@ pip install -r requirements.txt
 
 - [x] Set up repo structure and planning 
 - [x] Basic frontend for uploading PDFs
-- [ ] Basic CV parsing using PDFs
-- [ ] Skill and experience extraction via NLP 
-- [ ] Flask backend with form-based CV upload
-- [ ] Dashboard to view summarized CV insights
+- [x] Basic CV parsing using PDFs
+- [x] Skill and experience extraction via NLP 
+- [x] Flask backend with form-based CV upload
+- [x] Dashboard to view summarized CV insights
 - [ ] Option to download insight reports
 
 ## 🤝 Contributing
