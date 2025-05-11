@@ -29,17 +29,19 @@
         <a href="mailto:{{ result.email }}" class="browse-file-button">Contact</a>
       </div>
       <div class="email-div">
-        <div class="email-parse"><i class="fa-solid fa-envelope" style="margin-right: 5px;"></i>{{ result.email }}</div>
-        <div class="phone-parse"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i>{{ result.phone }}</div>
+        <div class="email-parse"><i class="fa-solid fa-envelope" style="margin-right: 5px;"></i><a href="mailto:{{ result.email }}">{{ result.email }}</a></div>
+        <div class="phone-parse"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i><a href="tel:{{ result.phone }}">{{ result.phone }}</a></div>
       </div>
       <div class="skills-div">
         <input type="text" id="skill-search" placeholder="Search" class="skill-search-input" />
         <div id="skill-tags">
           {% for skill in result.skills %}
-            <span class="skill-tag">{{ skill }}</span>
+            <a href="https://www.google.com/search?q={{ skill | urlencode }}" target="_blank" rel="noopener noreferrer">
+              <span class="skill-tag">{{ skill }}</span>
+            </a>
           {% endfor %}
-        </div>
-      </div>
+        </div>        
+      </div>  
   </div>
 
   <div class="credits">
