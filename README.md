@@ -13,7 +13,7 @@ CV Insights is an intelligent tool designed to extract, analyze, and provide mea
 - ✅ Natural Language Processing (NLP) model for:
   - Skills extraction
   - Summarized profile view
-- ✅ React-based interactive web interface
+- 🔜 React-based interactive web interface
 - 🔜 Admin dashboard for viewing and filtering CV insights (later)
 - 🔜 Support for batch uploads and exports
 
